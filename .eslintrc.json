@@ -1,0 +1,76 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "max-len": ["error", { "code": 100 }],
+    "prefer-promise-reject-errors": ["off"],
+    "react/prop-types": ["warn"],
+    "no-return-assign": ["off"],
+    "linebreak-style": ["off", "windows"],
+    "react/no-unescaped-entities": ["off"],
+
+    "react/no-multi-comp": ["enabled", { "ignoreStateless": "boolean" }],
+
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
+    "jsx-a11y/alt-text": [
+      2,
+      {
+        "elements": ["img", "object", "area", "input[type=\"image\"]"],
+        "img": ["Image"],
+        "object": ["Object"],
+        "area": ["Area"],
+        "input[type=\"image\"]": ["InputImage"]
+      }
+    ],
+
+    "jsx-a11y/img-redundant-alt": [
+      2,
+      {
+        "components": ["Image"],
+        "words": ["Bild", "Foto"]
+      }
+    ],
+
+    "react/no-string-refs": ["enabled", { "noTemplateLiterals": "boolean" }],
+
+    "react/self-closing-comp": [
+      "error",
+      {
+        "component": true,
+        "html": true
+      }
+    ],
+
+    "react/jsx-pascal-case": [
+      "enabled",
+      {
+        "allowAllCaps": "allowAllCaps",
+        "allowNamespace": "allowNamespace",
+        "allowLeadingUnderscore": "allowLeadingUnderscore",
+        "ignore": "ignore"
+      }
+    ],
+
+    "react/button-has-type": [
+      "enabled",
+      {
+        "button": "boolean",
+        "submit": "boolean",
+        "reset": "boolean"
+      }
+    ]
+  }
+}
